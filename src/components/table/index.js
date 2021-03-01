@@ -1,9 +1,11 @@
 import AutoTextArea from "../autotextarea";
-import inputBox from "../inputBox";
-
+import InputBox from "../inputBox";
+import { useState } from "react";
 const Table = ({ name }) => {
+  let [show, setShow] = useState(true);
   const handleClick = (e) => {
-    return <inputBox />;
+    e.preventDefault();
+    setShow(true);
   };
   return (
     <div className="tablecontainer">
@@ -26,6 +28,7 @@ const Table = ({ name }) => {
         </tbody>
       </table>
       <button onClick={handleClick}>Add Task</button>
+      {show === true ? <InputBox setShow={setShow} /> : null}
     </div>
   );
 };

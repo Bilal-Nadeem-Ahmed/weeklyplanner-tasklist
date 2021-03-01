@@ -1,8 +1,9 @@
-const inputBox = () => {
+const InputBox = ({ setShow }) => {
   const handleClick = (e) => {
     console.log(e);
     e.preventDefault();
     console.log("it works");
+    setShow(false);
   };
   return (
     <div id="inputbox">
@@ -13,4 +14,4 @@ const inputBox = () => {
   );
 };
 
-export default inputBox;
+export default InputBox;
