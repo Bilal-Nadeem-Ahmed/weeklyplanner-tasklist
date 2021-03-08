@@ -23,6 +23,7 @@ const Table = ({ name }) => {
             </td>
             <td>
               <AutoTextArea />
+
             </td>
           </tr>
         </tbody>
